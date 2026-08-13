@@ -1,0 +1,19 @@
+# Python virtual environments
+.venv/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Lab generated outputs and large datasets
+LAB 1/outputs/
+LAB 2/outputs/
+
+# Archive files
+*.zip
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
