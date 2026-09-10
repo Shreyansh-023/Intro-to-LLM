@@ -11,6 +11,10 @@ LAB 1/outputs/
 LAB 2/outputs/
 LAB 3/outputs/
 LAB 4/data/
+LAB 5/doc2vec.model
+LAB 5/fasttext.model
+LAB 5/word2vec.model
+LAB 6/wiki.hi.zip
 
 # Archive files
 *.zip
