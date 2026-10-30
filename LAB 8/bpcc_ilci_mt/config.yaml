@@ -1,0 +1,53 @@
+save_data: bpcc_ilci_mt\onmt_data\onmt
+src_vocab: bpcc_ilci_mt\onmt_data\vocab.txt
+tgt_vocab: bpcc_ilci_mt\onmt_data\vocab.txt
+src_vocab_size: 8000
+tgt_vocab_size: 8000
+share_vocab: true
+src_seq_length: 100
+tgt_seq_length: 100
+data:
+  corpus_1:
+    path_src: bpcc_ilci_mt\onmt_data\train.src.tok
+    path_tgt: bpcc_ilci_mt\onmt_data\train.tgt.tok
+    transforms: []
+    weight: 1
+  valid:
+    path_src: bpcc_ilci_mt\onmt_data\valid.src.tok
+    path_tgt: bpcc_ilci_mt\onmt_data\valid.tgt.tok
+    transforms: []
+save_model: bpcc_ilci_mt\models\bpcc_transformer
+save_checkpoint_steps: 2000
+keep_checkpoint: 3
+train_steps: 10000
+valid_steps: 1000
+warmup_steps: 40
+report_every: 10
+decoder_type: transformer
+encoder_type: transformer
+layers: 4
+hidden_size: 256
+word_vec_size: 256
+transformer_ff: 1024
+heads: 4
+dropout: 0.1
+position_encoding: true
+optim: adam
+adam_beta1: 0.9
+adam_beta2: 0.998
+decay_method: noam
+learning_rate: 2.0
+label_smoothing: 0.1
+batch_size: 4096
+batch_type: tokens
+normalization: tokens
+max_grad_norm: 0.0
+param_init: 0.0
+param_init_glorot: true
+valid_batch_size: 8
+early_stopping: 4
+seed: 42
+world_size: 1
+gpu_ranks: []
+log_file: bpcc_ilci_mt\train.log
+log_file_level: INFO
